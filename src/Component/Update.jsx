@@ -15,7 +15,7 @@ export default function Update() {
         const updatecoffee = { name, price, details, categary, photo }
         console.log(updatecoffee)
 
-        fetch(`http://localhost:5000/coffees/${_id}`, {
+        fetch(`https://practice-coffee-iqtpq7j0o-santos-projects-eeedc48b.vercel.app/coffees/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -37,7 +37,12 @@ export default function Update() {
     return (
         <div>
             <div className="m-12 grid  justify-center">
-                <Link to={'/'}>home</Link>
+                <div className='flex text-red-400 gap-6'>
+                    <Link to={'/addcoffee'}>Add Coffee</Link>
+                    <Link to={'/'}>home</Link>
+                    <Link to={'/signin'}>signin</Link>
+                    <Link to={'/login'}>Login</Link>
+                </div>
                 <form onSubmit={hendelupdate} >
                     <div className="flex mb-8 gap-6">
                         <input type="text" className="bg-slate-300  w-[400px] h-8" name="name" defaultValue={name} placeholder="name" id="" />

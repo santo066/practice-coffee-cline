@@ -18,6 +18,8 @@ function App() {
       <div className='flex text-red-400 gap-6'>
         <Link to={'/addcoffee'}>Add Coffee</Link>
         <Link to={'/'}>home</Link>
+        <Link to={'/signin'}>signin</Link>
+        <Link to={'/login'}>Login</Link>
       </div>
       <h1 className='text-5xl text-center'>All coffee:{coffees.length}</h1>
       <div className='grid gap-4 mt-10 grid-cols-3'>
